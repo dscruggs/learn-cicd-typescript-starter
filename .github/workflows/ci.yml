@@ -39,5 +39,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run tests
+      - name: Run format check
         run: npm run format:check
+
+      - name: Run lint check
+        run: npm run lint -- --max-warnings=0
